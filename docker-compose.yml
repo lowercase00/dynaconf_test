@@ -4,7 +4,9 @@ services:
     build: .
     restart: always
     container_name: peanut_app
+    volumes:
+      - ./app
     environment:
-      - PEANUT_SQLALCHEMY_DATABASE_URI=postgresql://username:@host.docker.internal:5432/dbname
+      - PEANUT_CUSTOM_VAR=set_by_docker_env_var
     ports:
       - "5000:5000"
