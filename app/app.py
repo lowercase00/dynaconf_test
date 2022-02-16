@@ -1,5 +1,6 @@
 from flask import Flask
 from dynaconf import FlaskDynaconf
+
 app = Flask(__name__)
 FlaskDynaconf(app, envvar_prefix='PEANUT')
 
